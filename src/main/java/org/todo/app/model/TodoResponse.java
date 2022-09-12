@@ -13,4 +13,12 @@ public class TodoResponse {
 	private Long order;
 	private Boolean completed;
 	private String url;
+
+	public TodoResponse(TodoEntitiy todoEntitiy) {
+		this.id = todoEntitiy.getId();
+		this.title = todoEntitiy.getTitle();
+		this.order = todoEntitiy.getOrder();
+		this.completed = todoEntitiy.getCompleted();
+		this.url = "http://localhost:8080/" + this.getId();
+	}
 }
